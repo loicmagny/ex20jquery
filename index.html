@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="jquery-3.2.1.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <title>Exercice 4</title>
+</head>
+<body>
+  <form>
+    <button type="button" name="button" id="height">Changer taille</button>
+    <button type="button" name="button" id="green">Changer couleur</button>
+    <button type="button" name="button" id="resetColor">Réinitialiser couleur</button>
+    <button type="button" name="button" id="hide">Cacher</button>
+    <button type="button" name="button" id="display">Afficher</button>
+  </form>
+  <canvas id="square"></canvas>
+  <script>
+  $("#green").click(function(){
+    $("#square").css("background-color","green");
+  });
+  $("#hide").click(function(){
+    $("#square").hide();
+  });
+  $("#display").click(function(){
+    $("#square").show();
+  });
+  var height = 10;
+  var increaseHeight = 10;
+  var maxHeight = 100;
+  $("#height").click(function(){
+    if (height +10 > 100)
+    $("#square").css("height","10px");
+    else  {
+      height += 10;
+      $("#square").css("height", height +"px");
+    };
+  });
+  $("#resetColor").click(function(){
+    $("#square").css("background-color" , "black");
+  });
+  </script>
+</body>
+</html>
